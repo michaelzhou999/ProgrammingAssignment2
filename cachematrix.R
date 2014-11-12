@@ -1,5 +1,3 @@
-library(fBasics)
-
 ## Take a matrix and return a list of functions
 makeCacheMatrix <- function(x = matrix()) {
     i <- NULL
@@ -24,7 +22,7 @@ cacheSolve <- function(x, ...) {
         return(m)
     }
     data <- x$get()
-    m <- inv(data)
+    m <- solve(data)
     x$setinv(m)
     m
 }
